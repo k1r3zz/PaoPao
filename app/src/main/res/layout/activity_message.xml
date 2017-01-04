@@ -83,6 +83,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/rl_guanzhu"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimen_72"
                 android:layout_marginTop="@dimen/dimen_10"
@@ -132,6 +133,7 @@
 
 
             <RelativeLayout
+                android:id="@+id/rl_fans"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dimen_72"
                 android:layout_marginTop="@dimen/dimen_1"

@@ -18,6 +18,8 @@
     <string name="ho_girl">女神</string>
     <string name="ho_boy">男神</string>
     <string name="ho_more">更多</string>
+    <string name="ho_meilizhi">魅力排行榜</string>
+    <string name="ho_fuhao">富豪排行榜</string>
 
     <!--find-->
     <string name="fi_yaoyiyao">摇一摇</string>

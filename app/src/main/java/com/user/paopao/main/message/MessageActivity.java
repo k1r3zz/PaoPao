@@ -1,5 +1,6 @@
 package com.user.paopao.main.message;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -8,6 +9,7 @@ import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.user.paopao.R;
@@ -15,6 +17,7 @@ import com.user.paopao.base.BaseActivity;
 import com.user.paopao.entity.MessageEntity;
 import com.user.paopao.main.home.adapter.HomeAdapter;
 import com.user.paopao.main.message.adapter.MessageAdapter;
+import com.user.paopao.main.message.fans.FansActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +27,10 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
     private TextView btFriend;
     private LinearLayout paoyou;
     private RecyclerView mRecycler;
+    private RelativeLayout rlGuanzhu;
+    private RelativeLayout rlFans;
+
+
 
     private MessageAdapter messageAdapter;
     private List<MessageEntity> list = new ArrayList<>();
@@ -38,6 +45,8 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
         btMessage = (TextView) findViewById(R.id.bt_message);
         btFriend = (TextView) findViewById(R.id.bt_friend);
         paoyou = (LinearLayout) findViewById(R.id.paoyou);
+        rlGuanzhu = (RelativeLayout) findViewById(R.id.rl_guanzhu);
+        rlFans = (RelativeLayout) findViewById(R.id.rl_fans);
         mRecycler = (RecyclerView) findViewById(R.id.mRecycler);
 
         btMessage.setBackgroundResource(R.drawable.bt_home_top_selected);
@@ -59,6 +68,8 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
         super.initListeners();
         btFriend.setOnClickListener(this);
         btMessage.setOnClickListener(this);
+        rlGuanzhu.setOnClickListener(this);
+        rlFans.setOnClickListener(this);
 
     }
 
@@ -83,6 +94,9 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+        Intent intent=new Intent();
+        intent.setClass(MessageActivity.this, FansActivity.class);
+
         switch (v.getId()) {
             case R.id.bt_message:
                 btMessage.setBackgroundResource(R.drawable.bt_home_top_selected);
@@ -92,7 +106,6 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
                 paoyou.setVisibility(View.GONE);
                 mRecycler.setVisibility(View.VISIBLE);
 
-
                 break;
             case R.id.bt_friend:
                 btMessage.setBackgroundResource(R.drawable.bt_home_top_normal);
@@ -101,6 +114,16 @@ public class MessageActivity extends BaseActivity implements View.OnClickListene
                 btFriend.setTextColor(getResources().getColor(R.color.c_ffffff));
                 paoyou.setVisibility(View.VISIBLE);
                 mRecycler.setVisibility(View.GONE);
+
+                break;
+
+            case R.id.rl_guanzhu:
+                intent.putExtra("title",getString(R.string.mess_guanzhu));
+                startActivity(intent);
+                break;
+            case R.id.rl_fans:
+                intent.putExtra("title",getString(R.string.mess_fensi));
+                startActivity(intent);
 
                 break;
         }

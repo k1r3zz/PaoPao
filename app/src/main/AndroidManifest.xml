@@ -38,7 +38,8 @@
         <activity android:name=".main.find.FindActivity" />
         <activity android:name=".main.message.MessageActivity" />
         <activity android:name=".main.mine.MineActivity" />
-        <activity android:name=".main.message.fans.FansActivity"></activity>
+        <activity android:name=".main.message.fans.FansActivity" />
+        <activity android:name=".main.home.toplist.TopListActivity"></activity>
     </application>
 
 </manifest>

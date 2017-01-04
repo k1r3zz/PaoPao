@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.user.paopao.main.message.fans.FansActivity">
+    tools:context="com.user.paopao.main.home.toplist.TopListActivity">
 
     <com.user.paopao.widget.titleview.TitleView
         android:id="@+id/mTitleview"
@@ -14,12 +14,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mRecycler"
-        android:layout_marginTop="@dimen/dimen_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_marginTop="@dimen/dimen_1" />
 
 </LinearLayout>
