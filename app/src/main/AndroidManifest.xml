@@ -40,6 +40,9 @@
         <activity android:name=".main.mine.MineActivity" />
         <activity android:name=".main.message.fans.FansActivity" />
         <activity android:name=".main.home.toplist.TopListActivity"></activity>
+        <activity android:name=".main.message.fans.FansActivity" />
+        <activity android:name=".main.mine.setting.SettingActivity" />
+        <activity android:name=".main.mine.info.PersonalInfoActivity"></activity>
     </application>
 
 </manifest>

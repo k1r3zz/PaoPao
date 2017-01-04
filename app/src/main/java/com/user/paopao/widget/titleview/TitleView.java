@@ -18,7 +18,7 @@ import com.user.paopao.R;
 
 public class TitleView extends RelativeLayout {
     private RelativeLayout view;
-    private RelativeLayout titleview_left;
+    private ImageView titleview_left;
     private TextView titleview_title;
     private ImageView titleview_right;
     private RelativeLayout mRlTitleTop;
@@ -44,7 +44,7 @@ public class TitleView extends RelativeLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = (RelativeLayout) inflater.inflate(R.layout.titleview_layout, this);
         mRlTitleTop = (RelativeLayout) view.findViewById(R.id.mRlTitleTop);
-        titleview_left = (RelativeLayout) view.findViewById(R.id.titleview_left);
+        titleview_left = (ImageView) view.findViewById(R.id.titleview_left);
         titleview_title = (TextView) view.findViewById(R.id.titleview_title);
         titleview_right = (ImageView) view.findViewById(R.id.titleview_right);
     }
@@ -65,6 +65,14 @@ public class TitleView extends RelativeLayout {
         return titleview_title.getText().toString();
     }
 
+//    /**
+//     * 设置左边文字
+//     *
+//     * @param text
+//     */
+//    public void setLeftText(String text) {
+//        titleview_left.setText(text);
+//    }
 
 
     /**

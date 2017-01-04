@@ -51,7 +51,38 @@
     <string name="min_yaoqingzhuanqian">邀请赚钱</string>
     <string name="min_pinlunzhuanqian">评论赚钱</string>
 
+    <!--info-->
+    <string name="inf_title">个人资料</string>
+    <string name="inf_jubao">举报</string>
+    <string name="inf_fangke">访客</string>
+    <string name="inf_xiangce">相册</string>
+    <string name="inf_ziliao">资料</string>
+    <string name="inf_gexingqinming">个性签名</string>
+    <string name="inf_zhucedizhi">注册时间</string>
+    <string name="inf_dizhi">地址</string>
+    <string name="inf_nianling">年龄</string>
+    <string name="inf_shengao">身高</string>
+    <string name="inf_paopao">泡泡ID</string>
+    <string name="inf_lianxifangshi">联系方式</string>
+    <string name="inf_qqhao">QQ号</string>
+    <string name="inf_shoujihao">手机号</string>
+    <string name="inf_weixinhao">微信号</string>
+    <string name="inf_liwu">礼物</string>
+    <string name="inf_siliao">私聊</string>
+    <string name="inf_songliwu">送礼物</string>
+    <string name="inf_guanzhu">关注</string>
+    <string name="inf_dianzan">点赞</string>
 
+    <!--setting-->
+    <string name="setting_xiaoxituisong">消息推送</string>
+    <string name="setting_yijianfankui">意见反馈</string>
+    <string name="setting_yonghubidu">用户必读</string>
+    <string name="setting_zaixiankefu">在线客服</string>
+    <string name="setting_qingchuhuancun">清除缓存</string>
+    <string name="setting_guanyupaopao">关于泡泡</string>
+    <string name="setting_tuichuzhanghao">退出当期帐号</string>
+    <string name="setting_setting">设置</string>
+    
     <string name="str_loadmore">正在加载更多...</string>
     <string name="str_loadmore_faild">加载失败，点击重试...</string>
     <string name="str_loadMore_empty">没有更多数据了...</string>

@@ -23,6 +23,7 @@
 
 
         <ImageView
+            android:id="@+id/setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -52,6 +53,98 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/dimen_8"
                     android:src="@drawable/image3" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_3"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layout_toLeftOf="@+id/head"
+                    android:background="@drawable/bg_tagleft"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:paddingLeft="@dimen/dimen_5"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="地址：广州"
+                        android:textColor="@color/c_1A1A1A"
+                        android:textSize="@dimen/text_10" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_address"
+                    android:layout_marginRight="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:layout_toLeftOf="@+id/head"
+                    android:background="@drawable/bg_tagleft"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:paddingLeft="@dimen/dimen_5"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身高：175cm"
+                        android:textColor="@color/c_1A1A1A"
+                        android:textSize="@dimen/text_10" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_toRightOf="@+id/head"
+                    android:background="@drawable/bg_tagright"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:paddingLeft="@dimen/dimen_12"
+                    android:paddingRight="@dimen/dimen_5"
+                    android:paddingTop="@dimen/dimen_3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="年龄：22"
+                        android:textColor="@color/c_1A1A1A"
+                        android:textSize="@dimen/text_10" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_rideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_age"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layout_toRightOf="@+id/head"
+                    android:background="@drawable/mine_rideo"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/dimen_10">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_radiomy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:text="20'"
+                        android:textColor="@color/c_ffffff"
+                        android:textSize="@dimen/text_12"
+                        />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/name"
