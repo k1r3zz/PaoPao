@@ -1,18 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.user.paopao.MenuActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/mGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/c_ffffff"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mRbGroupbooking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/selector_bottom_navigation"
+                android:textSize="@dimen/text_16" />
+
+            <RadioButton
+                android:id="@+id/mRbEnquiry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="询价"
+                android:textColor="@color/selector_bottom_navigation"
+                android:textSize="@dimen/text_16" />
+
+            <RadioButton
+                android:id="@+id/mRbCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="客户"
+                android:textColor="@color/selector_bottom_navigation"
+                android:textSize="@dimen/text_16" />
+
+            <RadioButton
+                android:id="@+id/mRbMine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/selector_bottom_navigation"
+                android:textSize="@dimen/text_16" />
+        </RadioGroup>
+    </LinearLayout>
+</TabHost>

@@ -22,7 +22,7 @@
     <dimen name="text_50">50sp</dimen>
     <dimen name="text_80">80sp</dimen>
 
-
+    <dimen name="dimen_1">1dp</dimen>
     <dimen name="dimen_8">8dp</dimen>
     <dimen name="dimen_9">9dp</dimen>
     <dimen name="dimen_10">10dp</dimen>
@@ -56,7 +56,15 @@
     <dimen name="dimen_38">38dp</dimen>
     <dimen name="dimen_39">39dp</dimen>
     <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_41">41dp</dimen>
+    <dimen name="dimen_42">42dp</dimen>
+    <dimen name="dimen_43">43dp</dimen>
+    <dimen name="dimen_44">44dp</dimen>
     <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_46">46dp</dimen>
+    <dimen name="dimen_47">47dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_49">49dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
     <dimen name="dimen_60">60dp</dimen>
     <dimen name="dimen_70">70dp</dimen>

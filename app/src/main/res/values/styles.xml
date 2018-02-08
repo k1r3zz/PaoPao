@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/c_FF1F34</item>
+        <item name="colorPrimaryDark">@color/c_ffffff</item>
         <item name="colorAccent">@color/colorPrimary</item>
     </style>
     <!-- Base application theme. -->
@@ -73,10 +73,10 @@
     </style>
     <!--&lt;!&ndash;弹窗样式&ndash;&gt;-->
     <!--<style name="j_timepopwindow_anim_style">-->
-        <!--&lt;!&ndash; 指定显示的动画xml &ndash;&gt;-->
-        <!--<item name="android:windowEnterAnimation">@anim/j_anim_enter_bottom</item>-->
-        <!--&lt;!&ndash; 指定消失的动画xml &ndash;&gt;-->
-        <!--<item name="android:windowExitAnimation">@anim/j_anim_exit_bottom</item>-->
+    <!--&lt;!&ndash; 指定显示的动画xml &ndash;&gt;-->
+    <!--<item name="android:windowEnterAnimation">@anim/j_anim_enter_bottom</item>-->
+    <!--&lt;!&ndash; 指定消失的动画xml &ndash;&gt;-->
+    <!--<item name="android:windowExitAnimation">@anim/j_anim_exit_bottom</item>-->
     <!--</style>-->
 
     <style name="InquiryDetialTextStyle">
