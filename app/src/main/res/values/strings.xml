@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PaoPao</string>
+
+    <string name="str_loadmore">正在加载更多...</string>
+    <string name="str_loadmore_faild">加载失败，点击重试...</string>
+    <string name="str_loadMore_empty">没有更多数据了...</string>
+</resources>

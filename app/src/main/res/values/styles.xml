@@ -1,0 +1,122 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/c_FF1F34</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="MineTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/c_707070</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <!--公用横线style-->
+    <style name="XtStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/c_F4F4F4</item>
+    </style>
+
+    <!--公用竖线style-->
+    <style name="YtStyle">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/c_F4F4F4</item>
+    </style>
+
+    <!--dialog的样式-->
+    <style name="dialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="TabTextSize">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AddEnquiryTextStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/c_555555</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AddEnquiryTextHintStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/c_555555</item>
+        <item name="android:textColorHint">@color/c_999999</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="AddEnquiryLinearStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <!--&lt;!&ndash;弹窗样式&ndash;&gt;-->
+    <!--<style name="j_timepopwindow_anim_style">-->
+        <!--&lt;!&ndash; 指定显示的动画xml &ndash;&gt;-->
+        <!--<item name="android:windowEnterAnimation">@anim/j_anim_enter_bottom</item>-->
+        <!--&lt;!&ndash; 指定消失的动画xml &ndash;&gt;-->
+        <!--<item name="android:windowExitAnimation">@anim/j_anim_exit_bottom</item>-->
+    <!--</style>-->
+
+    <style name="InquiryDetialTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/c_555555</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="CustomerDetialTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/c_707070</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="CustomerDetialEditTextStyle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/c_707070</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Text13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/c_707070</item>
+    </style>
+
+    <style name="Text16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/c_FF1F34</item>
+    </style>
+
+
+    <!--设置tabLayout字体大小-->
+    <style name="MyCustomTabTextAppearance">
+        <item name="android:textSize">17sp</item>
+    </style>
+</resources>
