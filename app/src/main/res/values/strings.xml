@@ -8,6 +8,17 @@
     <string name="lo_registered">注册帐号</string>
     <string name="lo_forgetpsd">忘记密码</string>
 
+    <!--menu-->
+    <string name="menu_home">首页</string>
+    <string name="menu_find">发现</string>
+    <string name="menu_message">消息</string>
+    <string name="menu_mine">我的</string>
+
+    <!--home-->
+    <string name="ho_girl">女神</string>
+    <string name="ho_boy">男神</string>
+    <string name="ho_more">更多</string>
+
 
     <string name="str_loadmore">正在加载更多...</string>
     <string name="str_loadmore_faild">加载失败，点击重试...</string>

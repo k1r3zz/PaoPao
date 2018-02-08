@@ -16,13 +16,17 @@ import android.widget.RadioGroup;
 import android.widget.TabHost;
 
 import com.user.paopao.entity.LoginEntity;
+import com.user.paopao.main.find.FindActivity;
+import com.user.paopao.main.home.HomeActivity;
+import com.user.paopao.main.message.MessageActivity;
+import com.user.paopao.main.mine.MineActivity;
 import com.user.paopao.utils.ActivityUtil;
 
 public class MenuActivity extends TabActivity {
 
     //资源文件
-    private Class activitys[] = {LoginEntity.class, LoginEntity.class, LoginEntity.class, LoginEntity.class};//跳转的Activity
-    private String title[] = {"拼团", "询价", "客户", "我的"};//设置菜单的标题
+    private Class activitys[] = {HomeActivity.class, FindActivity.class, MessageActivity.class, MineActivity.class};//跳转的Activity
+    private String title[] = {"首页", "发现", "消息", "我的"};//设置菜单的标题
     private TabHost tabHost;
     private RadioGroup radioGroup;
 
@@ -30,12 +34,13 @@ public class MenuActivity extends TabActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        ActivityUtil.transplantStatus(MenuActivity.this);
         setContentView(R.layout.activity_main);
+//        ActivityUtil.transplantStatus(MenuActivity.this);
         initView();
         initTabView();//初始化tab标签
 
     }
+
     private void initView() {
         tabHost = getTabHost();
         radioGroup = (RadioGroup) findViewById(R.id.mGroup);

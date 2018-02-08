@@ -28,7 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/c_ffffff"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_8"
+            android:paddingTop="@dimen/dimen_8">
 
             <RadioButton
                 android:id="@+id/mRbGroupbooking"
@@ -37,11 +39,11 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:checked="true"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/bt_home_selector"
                 android:gravity="center"
-                android:text=""
+                android:text="@string/menu_home"
                 android:textColor="@color/selector_bottom_navigation"
-                android:textSize="@dimen/text_16" />
+                android:textSize="@dimen/text_12" />
 
             <RadioButton
                 android:id="@+id/mRbEnquiry"
@@ -49,11 +51,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/bt_find_selector"
                 android:gravity="center"
-                android:text="询价"
+                android:text="@string/menu_find"
                 android:textColor="@color/selector_bottom_navigation"
-                android:textSize="@dimen/text_16" />
+                android:textSize="@dimen/text_12" />
 
             <RadioButton
                 android:id="@+id/mRbCustomer"
@@ -61,11 +63,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/bt_message_selector"
                 android:gravity="center"
-                android:text="客户"
+                android:text="@string/menu_message"
                 android:textColor="@color/selector_bottom_navigation"
-                android:textSize="@dimen/text_16" />
+                android:textSize="@dimen/text_12" />
 
             <RadioButton
                 android:id="@+id/mRbMine"
@@ -73,11 +75,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@mipmap/ic_launcher"
+                android:drawableTop="@drawable/bt_mine_selector"
                 android:gravity="center"
-                android:text="我的"
+                android:text="@string/menu_mine"
                 android:textColor="@color/selector_bottom_navigation"
-                android:textSize="@dimen/text_16" />
+                android:textSize="@dimen/text_12" />
         </RadioGroup>
     </LinearLayout>
 </TabHost>
