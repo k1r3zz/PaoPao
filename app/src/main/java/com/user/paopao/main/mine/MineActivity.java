@@ -4,12 +4,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.user.paopao.R;
+import com.user.paopao.base.BaseActivity;
 
-public class MineActivity extends AppCompatActivity {
+public class MineActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void setContentView() {
         setContentView(R.layout.activity_mine);
+
+    }
+
+    @Override
+    protected void initViews() {
+
     }
 }

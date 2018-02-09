@@ -1,7 +1,11 @@
 <resources>
     <dimen name="dimen_1">1dp</dimen>
     <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
     <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_6">6dp</dimen>
+    <dimen name="dimen_7">7dp</dimen>
     <dimen name="dimen_8">8dp</dimen>
     <dimen name="dimen_9">9dp</dimen>
     <dimen name="dimen_10">10dp</dimen>
@@ -45,12 +49,19 @@
     <dimen name="dimen_48">48dp</dimen>
     <dimen name="dimen_49">49dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_51">51dp</dimen>
+    <dimen name="dimen_52">52dp</dimen>
+    <dimen name="dimen_53">53dp</dimen>
+    <dimen name="dimen_54">54dp</dimen>
+    <dimen name="dimen_55">55dp</dimen>
     <dimen name="dimen_60">60dp</dimen>
     <dimen name="dimen_70">70dp</dimen>
     <dimen name="dimen_72">72dp</dimen>
     <dimen name="dimen_80">80dp</dimen>
     <dimen name="dimen_120">120dp</dimen>
+    <dimen name="dimen_130">130dp</dimen>
     <dimen name="dimen_150">150dp</dimen>
+    <dimen name="dimen_155">155dp</dimen>
 
 
     <dimen name="text_8">8sp</dimen>

@@ -47,7 +47,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginTask> imple
     @Override
     protected void initDatas() {
         super.initDatas();
-       // mPresenter.login("15821086864", "123456");
+        // mPresenter.login("15821086864", "123456");
     }
 
     @Override

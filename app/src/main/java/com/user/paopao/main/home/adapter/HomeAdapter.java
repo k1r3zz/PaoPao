@@ -23,6 +23,7 @@ public class HomeAdapter extends BaseQuickAdapter<HomeEntity, BaseViewHolder> {
 
     @Override
     protected void convert(BaseViewHolder helper, HomeEntity item) {
+        helper.setText(R.id.text, item.getTitle());
 
     }
 }
