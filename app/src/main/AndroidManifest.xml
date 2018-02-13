@@ -37,7 +37,8 @@
         <activity android:name=".main.home.HomeActivity" />
         <activity android:name=".main.find.FindActivity" />
         <activity android:name=".main.message.MessageActivity" />
-        <activity android:name=".main.mine.MineActivity"></activity>
+        <activity android:name=".main.mine.MineActivity" />
+        <activity android:name=".main.message.fans.FansActivity"></activity>
     </application>
 
 </manifest>
