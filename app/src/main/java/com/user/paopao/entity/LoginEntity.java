@@ -14,7 +14,7 @@ public class LoginEntity implements Serializable {
     /**
      * token : 0dff1a7a4d39080dad73a67d4bcacd9f
      * sourceip : 116.228.49.54
-     * name : 苏矿军
+     * name : 苏矿军AA
      * code : 77
      * loginName : 15821086864
      * userType : 1
