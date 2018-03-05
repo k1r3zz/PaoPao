@@ -8,17 +8,16 @@
         android:id="@+id/mRlTitleTop"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/c_FF1F34">
+        android:background="@color/c_ffffff">
 
-        <TextView
+        <ImageView
             android:id="@+id/titleview_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:padding="@dimen/dp_10"
-            android:text="返回"
-            android:textColor="@color/c_ffffff"
+            android:src="@drawable/bg_left_black"
             android:textSize="@dimen/sp_14" />
 
         <TextView
@@ -27,8 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginLeft="10dp"
-            android:text="哪里呢"
-            android:textColor="@color/c_ffffff"
+            android:textColor="@color/c_000020"
             android:textSize="@dimen/text_18" />
 
         <ImageView
@@ -37,8 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@mipmap/ic_launcher"
             android:padding="@dimen/dp_10"
-            android:visibility="gone"/>
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
     </RelativeLayout>
 </LinearLayout>
