@@ -38,5 +38,17 @@
             android:padding="@dimen/dp_10"
             android:src="@mipmap/ic_launcher"
             android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/c_333333"
+            android:visibility="gone"
+            android:textSize="@dimen/text_13" />
     </RelativeLayout>
 </LinearLayout>

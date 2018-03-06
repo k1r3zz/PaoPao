@@ -3,6 +3,7 @@ package com.user.paopao.widget.titleview;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class TitleView extends RelativeLayout {
     private RelativeLayout view;
     private ImageView titleview_left;
     private TextView titleview_title;
+    private TextView title_right_tv;
     private ImageView titleview_right;
     private RelativeLayout mRlTitleTop;
 
@@ -47,6 +49,7 @@ public class TitleView extends RelativeLayout {
         titleview_left = (ImageView) view.findViewById(R.id.titleview_left);
         titleview_title = (TextView) view.findViewById(R.id.titleview_title);
         titleview_right = (ImageView) view.findViewById(R.id.titleview_right);
+        title_right_tv = (TextView) view.findViewById(R.id.title_right_tv);
     }
 
     /**
@@ -57,6 +60,17 @@ public class TitleView extends RelativeLayout {
     public void setTitleText(String text) {
         titleview_title.setText(text);
     }
+
+    /**
+     * 设置右边文字
+     *
+     * @param text
+     */
+    public void setRightText(String text) {
+        title_right_tv.setText(text);
+        title_right_tv.setVisibility(View.VISIBLE);
+    }
+
 
     /**
      * 得到标题

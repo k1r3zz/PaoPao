@@ -1,5 +1,6 @@
 package com.user.paopao.main.find.fragment;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.user.paopao.R;
 import com.user.paopao.base.BaseFragment;
 import com.user.paopao.entity.FindEntity;
 import com.user.paopao.main.find.adapter.FindAdapter;
+import com.user.paopao.main.mine.info.PersonalInfoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +46,20 @@ public class YuanFenFragment extends BaseFragment {
         mRecycler.setItemAnimator(new DefaultItemAnimator());
         mRecycler.setNestedScrollingEnabled(false);
 
+    }
+
+
+    @Override
+    protected void initListeners() {
+        super.initListeners();
+        findAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), PersonalInfoActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
     }
 
     @Override

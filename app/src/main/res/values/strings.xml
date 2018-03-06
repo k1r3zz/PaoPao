@@ -82,7 +82,48 @@
     <string name="setting_guanyupaopao">关于泡泡</string>
     <string name="setting_tuichuzhanghao">退出当期帐号</string>
     <string name="setting_setting">设置</string>
-    
+
+    <!--recharge-->
+    <string name="rech_title">充值</string>
+    <string name="rech_xuanzechongzhijine">选择充值金额</string>
+    <string name="rech_chongzhi">如果充值遇到问题请及时联系客服</string>
+    <string name="rech_lianxikefu">联系客服</string>
+    <string name="rech_yuan">￥%s</string>
+    <string name="rech_paobi">%s泡币</string>
+
+    <!--cash-->
+    <string name="cash_title">提现</string>
+    <string name="cash_mingxi">明细</string>
+    <string name="cash_zhifubaozhang">支付宝账号</string>
+    <string name="cash_zhifubaoxingming">支付宝姓名</string>
+    <string name="cash_phone">手机号码</string>
+    <string name="cash_cash">提现金额</string>
+    <string name="cash_qingshuruzhifubaozhanghao">请输入支付宝认证过的帐号</string>
+    <string name="cash_qingshuruzhifubaoxingming">请输入支付宝真实姓名</string>
+    <string name="cash_qingshuruzhenshiyouxiaolianxifangshi">请输入真实有效联系方式</string>
+    <string name="cash_qingshurujine">请输入金额</string>
+    <string name="cash_paobi">泡币：</string>
+    <string name="cash_paobiduihuanbili">泡币兑换现金比例：</string>
+    <string name="cash_tixiandaozhifubao">提现到支付宝</string>
+    <string name="cash_tixianshuoming">提现说明：</string>
+    <string name="cash_tv1">1、提高兑换比例的方法为邀请好友，详情请见分享赚钱。</string>
+    <string name="cash_tv2">2、提现建议加官方支付宝帐号18071874701。</string>
+    <string name="cash_tv3">3、提现处理会在1-7个工作日，期间可以咨询客服。</string>
+    <string name="cash_tv4">4、请认真填写支付宝帐号和帐号对应的姓名。</string>
+    <string name="cash_tv5">5、最低提现金额50元。</string>
+
+    <!--contact-->
+    <string name="cont_title">联系方式</string>
+    <string name="cont_qq">1、QQ号</string>
+    <string name="cont_weixin">2、微信号</string>
+    <string name="cont_shouji">3、手机号</string>
+    <string name="cont_beichakanpaobi">被查看所需泡币:</string>
+    <string name="cont_queding">确定</string>
+    <string name="cont_shuoming">说明：</string>
+    <string name="cont_tv1">1、用户查看您的联系方式使用的泡币都归您所有。</string>
+    <string name="cont_tv2">2、请保证您填写的联系方式正确，如填写虚假联系方式，被举报我们将会进行封号处理。</string>
+
+
     <string name="str_loadmore">正在加载更多...</string>
     <string name="str_loadmore_faild">加载失败，点击重试...</string>
     <string name="str_loadMore_empty">没有更多数据了...</string>

@@ -39,10 +39,13 @@
         <activity android:name=".main.message.MessageActivity" />
         <activity android:name=".main.mine.MineActivity" />
         <activity android:name=".main.message.fans.FansActivity" />
-        <activity android:name=".main.home.toplist.TopListActivity"></activity>
+        <activity android:name=".main.home.toplist.TopListActivity" />
         <activity android:name=".main.message.fans.FansActivity" />
         <activity android:name=".main.mine.setting.SettingActivity" />
-        <activity android:name=".main.mine.info.PersonalInfoActivity"></activity>
+        <activity android:name=".main.mine.info.PersonalInfoActivity" />
+        <activity android:name=".main.mine.recharge.RechargeActivity" />
+        <activity android:name=".main.mine.cash.CashActivity" />
+        <activity android:name=".main.mine.contactway.ContactWayActivity"></activity>
     </application>
 
 </manifest>

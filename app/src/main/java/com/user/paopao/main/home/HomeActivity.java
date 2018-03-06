@@ -9,12 +9,16 @@ import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.user.paopao.R;
 import com.user.paopao.base.BaseActivity;
 import com.user.paopao.entity.HomeEntity;
 import com.user.paopao.main.home.adapter.HomeAdapter;
+import com.user.paopao.main.home.toplist.TopListActivity;
+import com.user.paopao.main.mine.info.PersonalInfoActivity;
 import com.user.paopao.widget.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -26,6 +30,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private TextView btGirl;
     private TextView btBoy;
     private RecyclerView mRecycler;
+    private RelativeLayout rl_meili;
+    private RelativeLayout rl_fuhao;
 
     private HomeAdapter homeAdapter;
     private List<HomeEntity> list = new ArrayList<>();
@@ -42,6 +48,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         btGirl = (TextView) findViewById(R.id.bt_girl);
         btBoy = (TextView) findViewById(R.id.bt_boy);
         mRecycler = (RecyclerView) findViewById(R.id.mRecycler);
+        rl_meili = (RelativeLayout) findViewById(R.id.rl_meili);
+        rl_fuhao = (RelativeLayout) findViewById(R.id.rl_fuhao);
 
         btGirl.setBackgroundResource(R.drawable.bt_home_top_selected);
         btGirl.setTextColor(getResources().getColor(R.color.c_ffffff));
@@ -89,11 +97,34 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         super.initListeners();
         btGirl.setOnClickListener(this);
         btBoy.setOnClickListener(this);
+        rl_meili.setOnClickListener(this);
+        rl_fuhao.setOnClickListener(this);
+        homeAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                Intent intent = new Intent();
+                switch (view.getId()) {
+                    case R.id.rl1:
+                        intent.setClass(HomeActivity.this, PersonalInfoActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.rl2:
+                        intent.setClass(HomeActivity.this, PersonalInfoActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.rl3:
+                        intent.setClass(HomeActivity.this, PersonalInfoActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+            }
+        });
 
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.bt_girl:
                 btGirl.setBackgroundResource(R.drawable.bt_home_top_selected);
@@ -108,6 +139,17 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 btGirl.setTextColor(getResources().getColor(R.color.c_000000));
                 btBoy.setTextColor(getResources().getColor(R.color.c_ffffff));
 
+                break;
+            case R.id.rl_meili:
+                intent.setClass(HomeActivity.this, TopListActivity.class);
+                intent.putExtra("title", getString(R.string.ho_meilizhi));
+                startActivity(intent);
+
+                break;
+            case R.id.rl_fuhao:
+                intent.setClass(HomeActivity.this, TopListActivity.class);
+                intent.putExtra("title", getString(R.string.ho_fuhao));
+                startActivity(intent);
                 break;
         }
     }

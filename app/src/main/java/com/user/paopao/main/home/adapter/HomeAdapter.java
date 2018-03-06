@@ -24,6 +24,7 @@ public class HomeAdapter extends BaseQuickAdapter<HomeEntity, BaseViewHolder> {
     @Override
     protected void convert(BaseViewHolder helper, HomeEntity item) {
         helper.setText(R.id.text, item.getTitle());
+        helper.addOnClickListener(R.id.rl1).addOnClickListener(R.id.rl2).addOnClickListener(R.id.rl3);
 
     }
 }

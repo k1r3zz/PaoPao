@@ -71,9 +71,11 @@
         android:orientation="horizontal">
 
         <RelativeLayout
+            android:id="@+id/rl1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/ll_selector">
 
             <ImageView
                 android:id="@+id/image1"
@@ -99,9 +101,11 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/rl2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/ll_selector">
 
             <ImageView
                 android:id="@+id/image2"
@@ -125,9 +129,11 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/rl3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/ll_selector">
 
             <ImageView
                 android:id="@+id/image3"

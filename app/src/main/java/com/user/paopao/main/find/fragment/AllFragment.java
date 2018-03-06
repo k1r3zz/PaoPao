@@ -1,6 +1,7 @@
 package com.user.paopao.main.find.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,11 +14,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.user.paopao.R;
 import com.user.paopao.base.BaseFragment;
 import com.user.paopao.entity.FindEntity;
 import com.user.paopao.main.find.adapter.FindAdapter;
+import com.user.paopao.main.home.HomeActivity;
 import com.user.paopao.main.home.adapter.HomeAdapter;
+import com.user.paopao.main.mine.info.PersonalInfoActivity;
 import com.user.paopao.widget.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -49,6 +53,19 @@ public class AllFragment extends BaseFragment {
         mRecycler.setItemAnimator(new DefaultItemAnimator());
         mRecycler.setNestedScrollingEnabled(false);
 
+    }
+
+    @Override
+    protected void initListeners() {
+        super.initListeners();
+        findAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), PersonalInfoActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
     }
 
     @Override

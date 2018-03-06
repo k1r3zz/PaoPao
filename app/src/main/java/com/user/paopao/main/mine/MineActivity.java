@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.user.paopao.R;
 import com.user.paopao.base.BaseActivity;
+import com.user.paopao.main.mine.cash.CashActivity;
+import com.user.paopao.main.mine.contactway.ContactWayActivity;
+import com.user.paopao.main.mine.recharge.RechargeActivity;
 import com.user.paopao.main.mine.setting.SettingActivity;
 import com.user.paopao.widget.circleImageView.CircleImageView;
 
@@ -79,14 +82,30 @@ public class MineActivity extends BaseActivity implements View.OnClickListener {
     protected void initListeners() {
         super.initListeners();
         setting.setOnClickListener(this);
+        chongzhipaobi.setOnClickListener(this);
+        woyaotixian.setOnClickListener(this);
+        lianxifangshi.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent();
+
         switch (v.getId()) {
             case R.id.setting:
-                Intent intent = new Intent();
                 intent.setClass(MineActivity.this, SettingActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.chongzhipaobi:
+                intent.setClass(MineActivity.this, RechargeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.woyaotixian:
+                intent.setClass(MineActivity.this, CashActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.lianxifangshi:
+                intent.setClass(MineActivity.this, ContactWayActivity.class);
                 startActivity(intent);
                 break;
         }

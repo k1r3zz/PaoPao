@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.user.paopao.main.mine.cash.CashActivity">
+
+    <com.user.paopao.widget.titleview.TitleView
+        android:id="@+id/mtitleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_1"
+                android:background="@color/c_ffffff">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:text="@string/cash_zhifubaozhang"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/text_14" />
+
+                <EditText
+                    android:id="@+id/zhifubaozhanghao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/c_ffffff"
+                    android:hint="@string/cash_qingshuruzhifubaozhanghao"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_AAAAAA"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_1"
+                android:background="@color/c_ffffff">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:text="@string/cash_zhifubaoxingming"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/text_14" />
+
+                <EditText
+                    android:id="@+id/zhifubaoxingming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/c_ffffff"
+                    android:hint="@string/cash_qingshuruzhifubaoxingming"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_AAAAAA"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_1"
+                android:background="@color/c_ffffff">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:text="@string/cash_phone"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/text_14" />
+
+                <EditText
+                    android:id="@+id/shoujihao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/c_ffffff"
+                    android:hint="@string/cash_qingshuruzhenshiyouxiaolianxifangshi"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_AAAAAA"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_1"
+                android:background="@color/c_ffffff">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:text="@string/cash_cash"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/text_14" />
+
+                <EditText
+                    android:id="@+id/tixianjine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/c_ffffff"
+                    android:hint="@string/cash_qingshurujine"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_AAAAAA"
+                    android:textSize="@dimen/text_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_1"
+                android:background="@color/c_ffffff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cash1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_marginLeft="@dimen/dimen_12"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_cash_selector"
+                        android:gravity="center"
+                        android:text="100元"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/text_15" />
+
+                    <TextView
+                        android:id="@+id/cash2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_cash_selector"
+                        android:gravity="center"
+                        android:text="200元"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/text_15" />
+
+                    <TextView
+                        android:id="@+id/cash3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_cash_selector"
+                        android:gravity="center"
+                        android:text="300元"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/text_15" />
+
+                    <TextView
+                        android:id="@+id/cash4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginRight="@dimen/dimen_13"
+                        android:layout_weight="1"
+                        android:background="@drawable/bt_cash_selector"
+                        android:gravity="center"
+                        android:text="500元"
+                        android:textColor="@color/c_333333"
+                        android:textSize="@dimen/text_15" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/paobi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:text="@string/cash_paobi"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/text_14" />
+
+                <TextView
+                    android:id="@+id/paobibili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:text="@string/cash_paobiduihuanbili"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/text_14" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_44"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginRight="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:background="@drawable/ll_cash"
+                    android:text="@string/cash_tixiandaozhifubao"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/text_16" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_28"
+                    android:text="@string/cash_tixianshuoming"
+                    android:textColor="@color/c_ff973a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="@string/cash_tv1"
+                    android:textColor="@color/c_858585" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="@string/cash_tv2"
+                    android:textColor="@color/c_858585" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="@string/cash_tv3"
+                    android:textColor="@color/c_858585" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="@string/cash_tv4"
+                    android:textColor="@color/c_858585" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_12"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="@string/cash_tv5"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:textColor="@color/c_858585" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

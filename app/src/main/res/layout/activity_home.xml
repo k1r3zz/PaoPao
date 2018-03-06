@@ -65,8 +65,10 @@
                 android:padding="@dimen/dimen_5">
 
                 <RelativeLayout
+                    android:id="@+id/rl_meili"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_3"
                     android:layout_weight="1">
 
                     <ImageView
@@ -78,8 +80,10 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/rl_fuhao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_3"
                     android:layout_weight="1">
 
                     <ImageView
