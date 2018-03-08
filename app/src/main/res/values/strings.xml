@@ -123,6 +123,11 @@
     <string name="cont_tv1">1、用户查看您的联系方式使用的泡币都归您所有。</string>
     <string name="cont_tv2">2、请保证您填写的联系方式正确，如填写虚假联系方式，被举报我们将会进行封号处理。</string>
 
+    <!--photo-->
+    <string name="photo_title">我的相册</string>
+    <string name="photo_tv1">说明：可以添加9张照片，用户查看您的照片，需要给予您相应的泡币，具体金额由您自己设置。</string>
+    <string name="photo_tv2">设置用户查看你的每张照片需要支付给您的泡币：</string>
+
 
     <string name="str_loadmore">正在加载更多...</string>
     <string name="str_loadmore_faild">加载失败，点击重试...</string>

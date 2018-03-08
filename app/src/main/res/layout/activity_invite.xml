@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.user.paopao.main.mine.invite.InviteActivity">
+
+    <RelativeLayout
+        android:id="@+id/mRlTitleTop"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/c_ffffff">
+
+        <ImageView
+            android:id="@+id/titleview_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/bg_left_black"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/titleview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/c_000020"
+            android:textSize="@dimen/text_18" />
+
+        <ImageView
+            android:id="@+id/titleview_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/c_333333"
+            android:visibility="gone"
+            android:textSize="@dimen/text_13" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

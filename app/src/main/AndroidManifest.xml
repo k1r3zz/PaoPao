@@ -45,7 +45,9 @@
         <activity android:name=".main.mine.info.PersonalInfoActivity" />
         <activity android:name=".main.mine.recharge.RechargeActivity" />
         <activity android:name=".main.mine.cash.CashActivity" />
-        <activity android:name=".main.mine.contactway.ContactWayActivity"></activity>
+        <activity android:name=".main.mine.contactway.ContactWayActivity" />
+        <activity android:name=".main.mine.photo.MyPhotoActivity" />
+        <activity android:name=".main.mine.invite.InviteActivity"></activity>
     </application>
 
 </manifest>
