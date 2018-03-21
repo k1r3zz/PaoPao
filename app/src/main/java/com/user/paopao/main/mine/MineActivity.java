@@ -12,6 +12,7 @@ import com.user.paopao.R;
 import com.user.paopao.base.BaseActivity;
 import com.user.paopao.main.mine.cash.CashActivity;
 import com.user.paopao.main.mine.contactway.ContactWayActivity;
+import com.user.paopao.main.mine.invite.InviteActivity;
 import com.user.paopao.main.mine.photo.MyPhotoActivity;
 import com.user.paopao.main.mine.recharge.RechargeActivity;
 import com.user.paopao.main.mine.setting.SettingActivity;
@@ -87,6 +88,7 @@ public class MineActivity extends BaseActivity implements View.OnClickListener {
         woyaotixian.setOnClickListener(this);
         lianxifangshi.setOnClickListener(this);
         wodexiangce.setOnClickListener(this);
+        yaoqingzhuanqian.setOnClickListener(this);
     }
 
     @Override
@@ -112,6 +114,10 @@ public class MineActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.wodexiangce:
                 intent.setClass(MineActivity.this, MyPhotoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.yaoqingzhuanqian:
+                intent.setClass(MineActivity.this, InviteActivity.class);
                 startActivity(intent);
                 break;
         }

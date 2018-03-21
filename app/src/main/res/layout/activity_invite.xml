@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/c_487ABD"
     android:orientation="vertical"
     tools:context="com.user.paopao.main.mine.invite.InviteActivity">
 
@@ -11,7 +12,7 @@
         android:id="@+id/mRlTitleTop"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@color/c_ffffff">
+        android:background="@color/c_FD86AD">
 
         <ImageView
             android:id="@+id/titleview_left"
@@ -20,7 +21,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:padding="@dimen/dp_10"
-            android:src="@drawable/bg_left_black"
+            android:src="@drawable/bg_whiteleft"
             android:textSize="@dimen/sp_14" />
 
         <TextView
@@ -29,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginLeft="10dp"
-            android:textColor="@color/c_000020"
+            android:textColor="@color/c_ffffff"
             android:textSize="@dimen/text_18" />
 
         <ImageView
@@ -45,16 +46,322 @@
         <TextView
             android:id="@+id/title_right_tv"
             android:layout_width="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/dimen_12"
-            android:layout_centerVertical="true"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/dimen_12"
             android:textColor="@color/c_333333"
-            android:visibility="gone"
-            android:textSize="@dimen/text_13" />
+            android:textSize="@dimen/text_13"
+            android:visibility="gone" />
     </RelativeLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_banner" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_marginRight="@dimen/dimen_12"
+                android:background="@drawable/bg_invitebg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:src="@drawable/bg_one" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_60"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:text="@string/invite_tv1"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_15" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_50"
+                    android:layout_toLeftOf="@+id/invite_one"
+                    android:text="@string/invite_tvs1"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+                <Button
+                    android:id="@+id/invite_one"
+                    android:layout_width="@dimen/dimen_80"
+                    android:layout_height="@dimen/dimen_31"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_14"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/bt_invite"
+                    android:text="@string/invite_yaoqing"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/text_15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_marginRight="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/bg_invitebg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:src="@drawable/bg_two" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_60"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:text="@string/invite_tv2"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_15" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_50"
+                    android:layout_toLeftOf="@+id/invite_two"
+                    android:text="@string/invite_tvs2"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+                <Button
+                    android:id="@+id/invite_two"
+                    android:layout_width="@dimen/dimen_80"
+                    android:layout_height="@dimen/dimen_31"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_14"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/bt_invite"
+                    android:text="@string/invite_yaoqing"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/text_15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_marginRight="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/bg_invitebg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:src="@drawable/bg_three" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_60"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:text="@string/invite_tv3"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_15" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_50"
+                    android:layout_toLeftOf="@+id/invite_three"
+                    android:text="@string/invite_tvs3"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+                <Button
+                    android:id="@+id/invite_three"
+                    android:layout_width="@dimen/dimen_80"
+                    android:layout_height="@dimen/dimen_31"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_14"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/bt_invite"
+                    android:text="@string/invite_yaoqing"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/text_15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_marginRight="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/bg_invitebg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:src="@drawable/bg_four" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_60"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:text="@string/invite_tv4"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_15" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_50"
+                    android:layout_toLeftOf="@+id/invite_four"
+                    android:text="@string/invite_tvs4"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+                <Button
+                    android:id="@+id/invite_four"
+                    android:layout_width="@dimen/dimen_80"
+                    android:layout_height="@dimen/dimen_31"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_14"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/bt_invite"
+                    android:text="@string/invite_yaoqing"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/text_15" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:src="@drawable/bg_hb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="@dimen/dimen_36"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_invite2"
+                    android:text="@string/invite_fenxiang"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/text_14" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_marginLeft="@dimen/dimen_36"
+                    android:layout_marginRight="56dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_invite2"
+                    android:text="@string/invite_fenxiang"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_36"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:layout_marginRight="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_36"
+                android:background="@drawable/bt_invite_bg"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/bg_invite_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_13"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/invite_t1"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_13"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/invite_t2"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_13"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/invite_t3"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_15"
+                    android:layout_marginLeft="@dimen/dimen_13"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/invite_t4"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/dimen_12" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 
 </LinearLayout>

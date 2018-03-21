@@ -128,6 +128,22 @@
     <string name="photo_tv1">说明：可以添加9张照片，用户查看您的照片，需要给予您相应的泡币，具体金额由您自己设置。</string>
     <string name="photo_tv2">设置用户查看你的每张照片需要支付给您的泡币：</string>
 
+    <!--invite-->
+    <string name="invite_tv1">奖励一：10泡币奖励</string>
+    <string name="invite_tv2">奖励二：10%消费提成</string>
+    <string name="invite_tv3">奖励三：5%收入提成</string>
+    <string name="invite_tv4">奖励四：提高泡币兑换现金比例</string>
+    <string name="invite_tvs1">每成功邀请一个好友，即可获得10泡币的奖励</string>
+    <string name="invite_tvs2">每成功邀请一个好友，您将获得好友消费泡币的10%的提成</string>
+    <string name="invite_tvs3">每成功邀请一个好友，您将获得好友收入泡币的5%的提成</string>
+    <string name="invite_tvs4">每成功邀请一个好友，且好友充值成功一笔泡币，您的泡币兑换现金比例就可以提高1%，最多提高到70%</string>
+    <string name="invite_fenxiang">分享海报</string>
+    <string name="invite_yaoqing">马上邀请</string>
+    <string name="invite_t1">1、您可以根据您的需要选择合适您的海报。</string>
+    <string name="invite_t2">2、点击保存图片即可生成海报并且保存到您的相册。</string>
+    <string name="invite_t3">3、请注意提醒您邀请的人，注册时邀请人ID的正确填写（如果注册时没有填写您的邀请人泡泡ID，将视为不是您的邀请）。</string>
+    <string name="invite_t4">4、您保存的图片，图片里面的邀请ID将自动为您的ID。</string>
+
 
     <string name="str_loadmore">正在加载更多...</string>
     <string name="str_loadmore_faild">加载失败，点击重试...</string>
