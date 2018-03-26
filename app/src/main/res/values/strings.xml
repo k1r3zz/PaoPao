@@ -7,6 +7,14 @@
     <string name="lo_password">请输入密码</string>
     <string name="lo_registered">注册帐号</string>
     <string name="lo_forgetpsd">忘记密码</string>
+    <string name="reg_reg">注册</string>
+    <string name="rer_yanzhengma">获取验证码</string>
+    <string name="rer_inputyanzhengma">输入验证码</string>
+    <string name="reg_mima">输入密码，至少6位</string>
+    <string name="reg_yaoqingren">输入邀请人帐号（选填）</string>
+    <string name="reg_login">已有帐号登录</string>
+    <string name="reg_xieyi">注册代表同意该软件用户协议</string>
+
 
     <!--menu-->
     <string name="menu_home">首页</string>
@@ -143,6 +151,22 @@
     <string name="invite_t2">2、点击保存图片即可生成海报并且保存到您的相册。</string>
     <string name="invite_t3">3、请注意提醒您邀请的人，注册时邀请人ID的正确填写（如果注册时没有填写您的邀请人泡泡ID，将视为不是您的邀请）。</string>
     <string name="invite_t4">4、您保存的图片，图片里面的邀请ID将自动为您的ID。</string>
+
+    <!--income-->
+    <string name="income_liwu">礼物收入：</string>
+    <string name="income_xiangce">相册收入：</string>
+    <string name="income_lianxifangshi">联系方式收入:</string>
+    <string name="income_weixin">微信号</string>
+    <string name="income_shouji">手机号</string>
+    <string name="income_QQ">QQ号</string>
+    <string name="income_yaoqinghaoyou">邀请好友收入：</string>
+    <string name="income_yaoqingshouru">邀请收入</string>
+    <string name="income_yaoqingticheng">邀请提成</string>
+    <string name="income_paopao">泡泡名</string>
+    <string name="income_id">泡泡ID</string>
+    <string name="income_tichengpaobi">提成泡币数</string>
+    <string name="income_zongshouru">总收入：</string>
+    <string name="income_qutixian">去提现</string>
 
 
     <string name="str_loadmore">正在加载更多...</string>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_F4F4F4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_44"
+        android:layout_marginTop="@dimen/dimen_1"
+        android:background="@color/c_fffcf7"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:text="菲菲"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/text_13" />
+
+        <TextView
+            android:id="@+id/item_paopao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="343948"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/text_13" />
+
+        <TextView
+            android:id="@+id/item_paobi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:text="12"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/text_13" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -48,7 +48,8 @@
         <activity android:name=".main.mine.contactway.ContactWayActivity" />
         <activity android:name=".main.mine.photo.MyPhotoActivity" />
         <activity android:name=".main.mine.invite.InviteActivity" />
-        <activity android:name=".main.mine.myincome.MyInComeActivity"></activity>
+        <activity android:name=".main.mine.myincome.MyInComeActivity"/>
+        <activity android:name=".main.login.RegisterActivity"/>
     </application>
 
 </manifest>
