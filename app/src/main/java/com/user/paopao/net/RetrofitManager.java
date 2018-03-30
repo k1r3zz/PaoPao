@@ -137,8 +137,8 @@ public class RetrofitManager {
      * @param params
      * @param observer
      */
-    public void get(String url, Map<String, String> params, Observer observer) {
-        getApiServer().get(url, params).subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
+    public void get(String baseurl,String url, Map<String, String> params, Observer observer) {
+        getApiServer().get(baseurl,url, params).subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
     }
 
     /**

@@ -7,12 +7,18 @@ package com.user.paopao.net;
  */
 
 public class Url {
+    public static String LOGIN_URL = "paopao";
+
     /**
-     * 登录接口
+     * 验证码
      */
-    public static String LOGIN_URL = "login";
-    public static String LoginUrl = "validate";
-
-
-
+    public static String LoginUrl = "send_code_reg";
+    /**
+     * 注册
+     */
+    public static String RegisterUrl = "register";
+    /**
+     * 登录
+     */
+    public static String login = "login";
 }

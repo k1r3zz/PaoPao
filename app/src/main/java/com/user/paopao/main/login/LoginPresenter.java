@@ -21,10 +21,57 @@ public class LoginPresenter extends LoginContract.Presenter {
         mTask.login(username, passwod, new StringObserver() {
             @Override
             protected void onSuccess(String json) throws Exception {
-                BaseBean<LoginEntity> bean = JsonUtil.fromJsonObject(json, LoginEntity.class);
+//                BaseBean<LoginEntity> bean = JsonUtil.fromJsonObject(json, LoginEntity.class);
 
+                NetLog.d("opp", "[][][][][][]" + json);
+                LoginEntity loginEntity = new LoginEntity();
+                mView.loginSuccess(loginEntity);
+            }
+
+            @Override
+            protected void onFaild(String message) {
+
+            }
+
+            @Override
+            public void onComplete() {
+                mView.hiddenLoadding();
+            }
+        });
+    }
+
+    @Override
+    void sendCode(String mobile) {
+        mView.showLoadding();
+        mTask.sendCode(mobile, new StringObserver() {
+            @Override
+            protected void onSuccess(String json) throws Exception {
                 NetLog.d("opp", json);
-                mView.loginSuccess(bean.getData());
+//                BaseBean<LoginEntity> bean = JsonUtil.fromJsonObject(json, LoginEntity.class);
+//
+//                NetLog.d("opp", json);
+                mView.sendSuccess();
+            }
+
+            @Override
+            protected void onFaild(String message) {
+
+            }
+
+            @Override
+            public void onComplete() {
+                mView.hiddenLoadding();
+            }
+        });
+    }
+
+    @Override
+    void register(String mobile, String code, String pwd, String ppaoid) {
+        mView.showLoadding();
+        mTask.register(mobile, code, pwd, ppaoid, new StringObserver() {
+            @Override
+            protected void onSuccess(String json) throws Exception {
+                mView.register();
             }
 
             @Override

@@ -1,6 +1,7 @@
 package com.user.paopao.main.login;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.user.paopao.Constant;
 import com.user.paopao.MenuActivity;
 import com.user.paopao.R;
 import com.user.paopao.base.BaseActivity;
@@ -15,8 +17,13 @@ import com.user.paopao.entity.LoginEntity;
 import com.user.paopao.utils.ActivityUtil;
 import com.user.paopao.utils.LoginTimeCountUtil;
 import com.user.paopao.utils.NetLog;
+import com.user.paopao.utils.RSAUtil;
+import com.user.paopao.utils.ToastUtils;
+
+import java.security.PublicKey;
 
 public class RegisterActivity extends BaseActivity<LoginPresenter, LoginTask> implements LoginContract.View, View.OnClickListener {
+
     private LinearLayout llContext;
     private EditText etPhone;
     private ImageView deletPhone;
@@ -86,17 +93,71 @@ public class RegisterActivity extends BaseActivity<LoginPresenter, LoginTask> im
     }
 
     @Override
-    public void loginLogin() {
+    public void loginfailed() {
 
     }
 
     @Override
+    public void sendSuccess() {
+        ToastUtils.showMsg("发送验证码成功");
+
+    }
+
+    @Override
+    public void register() {
+        ToastUtils.showMsg("注册成功");
+        finish();
+    }
+
+    @Override
     public void onClick(View v) {
+        //获取公钥
         switch (v.getId()) {
             case R.id.bt_login:
-                startActivity(new Intent(RegisterActivity.this, MenuActivity.class));
+                if (etPhone.getText().toString().equals("")) {
+                    ToastUtils.showMsg("请输入手机号");
+                    return;
+                }
+                if (etMail.getText().toString().equals("")) {
+                    ToastUtils.showMsg("请输入验证码");
+                    return;
+                }
+                if (etPassword.getText().toString().equals("")) {
+                    ToastUtils.showMsg("请输入密码");
+                    return;
+                }
+
+
+                String phone = etPhone.getText().toString();
+                String Mail = etMail.getText().toString();
+                String Password = etPassword.getText().toString();
+                String EtYaoqingma = etYaoqingma.getText().toString();
+
+
+                String publicEncryptedetPhone = RSAUtil.encryptDataByPublicKey(phone.getBytes(), Constant.publicKey);
+                String publicEncryptedetMail = RSAUtil.encryptDataByPublicKey(Mail.getBytes(), Constant.publicKey);
+                String publicEncryptedetPassword = RSAUtil.encryptDataByPublicKey(Password.getBytes(), Constant.publicKey);
+                String publicEncryptedetetYaoqingma;
+                if (!"".equals(EtYaoqingma)) {
+                    publicEncryptedetetYaoqingma = RSAUtil.encryptDataByPublicKey(etYaoqingma.getText().toString().getBytes(), Constant.publicKey);
+                } else {
+                    publicEncryptedetetYaoqingma = "";
+
+                }
+
+                Log.d("opp", "----------" + phone + "、" + Mail + "、" + EtYaoqingma + "=" + Password);
+
+                mPresenter.register(publicEncryptedetPhone, publicEncryptedetMail, publicEncryptedetPassword, publicEncryptedetetYaoqingma);
                 break;
             case R.id.delet_mail:
+                if (etPhone.getText().toString().equals("")) {
+                    ToastUtils.showMsg("请输入手机号");
+                    return;
+                }
+                String phone2 = etPhone.getText().toString();
+                Log.d("opp", "----------" + phone2);
+                String publicEncryptedResult = RSAUtil.encryptDataByPublicKey(phone2.getBytes(), Constant.publicKey);
+                mPresenter.sendCode(publicEncryptedResult);
                 timeCountUtil.start();
 
                 break;

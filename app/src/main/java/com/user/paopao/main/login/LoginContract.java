@@ -17,12 +17,21 @@ import io.reactivex.Observer;
 public interface LoginContract {
     interface Task extends BaseTask {
         void login(String username, String passwod, Observer observer);
+
+        void sendCode(String mobile, Observer observer);
+
+        void register(String mobile, String code, String pwd, String ppaoid, Observer observer);
+
     }
 
     interface View extends BaseView {
         void loginSuccess(LoginEntity entity);
 
-        void loginLogin();
+        void loginfailed();
+
+        void sendSuccess();
+
+        void register();
 
     }
 
@@ -33,6 +42,10 @@ public interface LoginContract {
         }
 
         abstract void login(String username, String passwod);
+
+        abstract void sendCode(String mobile);
+
+        abstract void register(String mobile, String code, String pwd, String ppaoid);
 
     }
 }

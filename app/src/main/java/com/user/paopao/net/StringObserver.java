@@ -31,11 +31,16 @@ public abstract class StringObserver implements Observer<String> {
     public void onNext(String s) {
         try {
             JSONObject object = new JSONObject(s);
-            int code = object.getInt("code");
-            if (code == 0) {
+            int code = object.getInt("http_status");
+            String status=object.getString("return_code");
+            if(code!=200){
+                ToastUtils.showMsg("网络出错");
+                return;
+            }
+            if (status.equals("SUCCESS")) {
                 onSuccess(s);
             } else {
-                String message = object.getString("message");
+                String message = object.getString("return_msg");
                 ToastUtils.showMsg(message);
                 onFaild(message);
             }

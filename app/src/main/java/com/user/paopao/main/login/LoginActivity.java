@@ -7,12 +7,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.user.paopao.Constant;
 import com.user.paopao.MenuActivity;
 import com.user.paopao.R;
 import com.user.paopao.base.BaseActivity;
 import com.user.paopao.entity.LoginEntity;
 import com.user.paopao.utils.ActivityUtil;
 import com.user.paopao.utils.NetLog;
+import com.user.paopao.utils.RSAUtil;
+import com.user.paopao.utils.ToastUtils;
 
 public class LoginActivity extends BaseActivity<LoginPresenter, LoginTask> implements LoginContract.View, View.OnClickListener {
     private LinearLayout llContext;
@@ -47,7 +50,6 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginTask> imple
     @Override
     protected void initDatas() {
         super.initDatas();
-        // mPresenter.login("15821086864", "123456");
     }
 
     @Override
@@ -59,11 +61,21 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginTask> imple
 
     @Override
     public void loginSuccess(LoginEntity entity) {
-        NetLog.d("opp", entity.getName());
+        startActivity(new Intent(LoginActivity.this, MenuActivity.class));
     }
 
     @Override
-    public void loginLogin() {
+    public void loginfailed() {
+
+    }
+
+    @Override
+    public void sendSuccess() {
+
+    }
+
+    @Override
+    public void register() {
 
     }
 
@@ -71,7 +83,20 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginTask> imple
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_login:
-                startActivity(new Intent(LoginActivity.this, MenuActivity.class));
+                if (etPhone.getText().toString().equals("")) {
+                    ToastUtils.showMsg("请输入手机号");
+                    return;
+                }
+                if (etPassword.getText().toString().equals("")) {
+                    ToastUtils.showMsg("请输入密码");
+                    return;
+                }
+                String publicEncryptedetPhone = RSAUtil.encryptDataByPublicKey(etPhone.getText().toString().getBytes(), Constant.publicKey);
+                String publicEncryptedetMail = RSAUtil.encryptDataByPublicKey(etPassword.getText().toString().getBytes(), Constant.publicKey);
+
+                mPresenter.login(publicEncryptedetPhone, publicEncryptedetMail);
+
+
                 break;
             case R.id.bt_registered:
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
