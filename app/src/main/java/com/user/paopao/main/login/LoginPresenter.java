@@ -1,5 +1,8 @@
 package com.user.paopao.main.login;
 
+import android.util.Log;
+
+import com.user.paopao.Constant;
 import com.user.paopao.entity.BaseBean;
 import com.user.paopao.entity.LoginEntity;
 import com.user.paopao.main.login.LoginContract;
@@ -7,6 +10,8 @@ import com.user.paopao.net.BaseObserver;
 import com.user.paopao.net.StringObserver;
 import com.user.paopao.utils.JsonUtil;
 import com.user.paopao.utils.NetLog;
+import com.user.paopao.utils.RSAUtil;
+import com.user.paopao.utils.SharePrefrencesUtil;
 
 /**
  * author :kira
@@ -21,11 +26,14 @@ public class LoginPresenter extends LoginContract.Presenter {
         mTask.login(username, passwod, new StringObserver() {
             @Override
             protected void onSuccess(String json) throws Exception {
-//                BaseBean<LoginEntity> bean = JsonUtil.fromJsonObject(json, LoginEntity.class);
+                BaseBean<LoginEntity> baseBean = JsonUtil.fromJsonObject(json, LoginEntity.class);
 
-                NetLog.d("opp", "[][][][][][]" + json);
-                LoginEntity loginEntity = new LoginEntity();
-                mView.loginSuccess(loginEntity);
+                SharePrefrencesUtil.getInstance().saveObject(Constant.KEY_LOGIN_ENTITY, baseBean.getData());
+                LoginEntity loginEntity=baseBean.getData();
+                Log.d("opp", "====:"+RSAUtil.decryptedToStrByPrivate(loginEntity.getUser(),Constant.priviteKey));
+                Log.d("opp", "====:"+RSAUtil.decryptedToStrByPrivate(loginEntity.getToken(),Constant.priviteKey));
+
+                mView.loginSuccess(baseBean.getData());
             }
 
             @Override
@@ -46,10 +54,9 @@ public class LoginPresenter extends LoginContract.Presenter {
         mTask.sendCode(mobile, new StringObserver() {
             @Override
             protected void onSuccess(String json) throws Exception {
+
+
                 NetLog.d("opp", json);
-//                BaseBean<LoginEntity> bean = JsonUtil.fromJsonObject(json, LoginEntity.class);
-//
-//                NetLog.d("opp", json);
                 mView.sendSuccess();
             }
 

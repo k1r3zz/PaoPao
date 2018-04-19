@@ -9,7 +9,9 @@ import com.user.paopao.MyApplication;
 import com.user.paopao.net.okhttp.ProgressListener;
 import com.user.paopao.net.okhttp.ProgressRequestBody;
 import com.user.paopao.net.okhttp.ProgressResponseBody;
+import com.user.paopao.utils.AppData;
 import com.user.paopao.utils.NetworkUtil;
+import com.user.paopao.utils.RSAUtil;
 
 
 import java.io.File;
@@ -137,8 +139,8 @@ public class RetrofitManager {
      * @param params
      * @param observer
      */
-    public void get(String baseurl,String url, Map<String, String> params, Observer observer) {
-        getApiServer().get(baseurl,url, params).subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
+    public void get(String url, Map<String, String> params, Observer observer) {
+        getApiServer().get(url, params).subscribeOn(Schedulers.io()).unsubscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(observer);
     }
 
     /**
@@ -241,19 +243,23 @@ public class RetrofitManager {
         apiServer.downloadFile(url).enqueue(call);
     }
 
-//    Interceptor mTokenInterceptor = new Interceptor() {
-//        @Override
-//        public Response intercept(Chain chain) throws IOException {
-//            Request originalRequest = chain.request();
-//            if (AppData.getLogin() == null || AppData.getLogin().getToken() == null) {
-//                return chain.proceed(originalRequest);
-//            }
-//            Request authorised = originalRequest.newBuilder()
-//                    .header("token", AppData.getLogin().getToken())
-//                    .build();
-//            return chain.proceed(authorised);
-//        }
-//    };
+    Interceptor mTokenInterceptor = new Interceptor() {
+        @Override
+        public Response intercept(Chain chain) throws IOException {
+            Request originalRequest = chain.request();
+            if (AppData.getLogin() == null || AppData.getLogin().getToken() == null) {
+                return chain.proceed(originalRequest);
+            }
+//            String token = RSAUtil.encryptDataByPublicKey( AppData.getLogin().getToken().getBytes(), Constant.publicKey);
+//            String paoid = RSAUtil.encryptDataByPublicKey( AppData.getLogin().getUser().getBytes(), Constant.publicKey);
+
+            Request authorised = originalRequest.newBuilder()
+                    .header("token", "")
+                    .header("user", "")
+                    .build();
+            return chain.proceed(authorised);
+        }
+    };
 
 //    Interceptor mTokenInterceptor = new Interceptor() {
 //        @Override

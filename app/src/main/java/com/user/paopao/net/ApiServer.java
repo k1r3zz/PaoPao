@@ -25,13 +25,10 @@ import retrofit2.http.Url;
  * description: 接口请求方式
  */
 public interface ApiServer {
-    @FormUrlEncoded
-    @POST("{prefix}/{url}")
-    Observable<String> get(
-            @Path("prefix") String prefix,
-            @Path("url") String url,
-            @QueryMap Map<String, String> maps);
 
+    @GET("{url}")
+    Observable<String> get(@Path("url") String url,
+                           @QueryMap Map<String, String> maps);
     @FormUrlEncoded
     @POST("{prefix}/{url}")
     Observable<String> post(

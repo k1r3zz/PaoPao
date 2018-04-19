@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeActivity extends BaseActivity implements View.OnClickListener {
+public class HomeActivity extends BaseActivity<HomePresenter, HomeTask> implements HomeContract.View, View.OnClickListener {
     private LinearLayout llContext;
     private TextView btGirl;
     private TextView btBoy;
@@ -69,26 +69,28 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void initDatas() {
         super.initDatas();
-        list.clear();
-        for (int i = 0; i < 5; i++) {
-            HomeEntity entity = new HomeEntity();
-            switch (i) {
-                case 0:
-                    entity.setTitle("颜值女神");
-                    break;
-                case 1:
-                    entity.setTitle("特邀");
-                    break;
-                case 2:
-                    entity.setTitle("御姐");
-                    break;
-                case 3:
-                    entity.setTitle("萝莉");
-                    break;
-            }
-            list.add(entity);
-        }
-        homeAdapter.setNewData(list);
+        mPresenter.getData("1", "4", "3", "f", "1");
+
+//        list.clear();
+//        for (int i = 0; i < 5; i++) {
+//            HomeEntity entity = new HomeEntity();
+//            switch (i) {
+//                case 0:
+//                    entity.setTitle("颜值女神");
+//                    break;
+//                case 1:
+//                    entity.setTitle("特邀");
+//                    break;
+//                case 2:
+//                    entity.setTitle("御姐");
+//                    break;
+//                case 3:
+//                    entity.setTitle("萝莉");
+//                    break;
+//            }
+//            list.add(entity);
+//        }
+//        homeAdapter.setNewData(list);
 
     }
 
@@ -131,6 +133,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 btBoy.setBackgroundResource(R.drawable.bt_home_top_normal);
                 btGirl.setTextColor(getResources().getColor(R.color.c_ffffff));
                 btBoy.setTextColor(getResources().getColor(R.color.c_000000));
+                mPresenter.getData("1", "4", "3", "f", "1");
+
 
                 break;
             case R.id.bt_boy:
@@ -138,6 +142,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 btBoy.setBackgroundResource(R.drawable.bt_home_top_selected);
                 btGirl.setTextColor(getResources().getColor(R.color.c_000000));
                 btBoy.setTextColor(getResources().getColor(R.color.c_ffffff));
+                mPresenter.getData("1", "4", "3", "f", "0");
+
 
                 break;
             case R.id.rl_meili:
@@ -152,5 +158,12 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    public void getData(List<HomeEntity> mlist) {
+        list.clear();
+        list.addAll(mlist);
+        homeAdapter.setNewData(list);
     }
 }

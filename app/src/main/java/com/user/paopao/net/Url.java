@@ -21,4 +21,8 @@ public class Url {
      * 登录
      */
     public static String login = "login";
+    /**
+     * 首页列表数据
+     */
+    public static String getIndex = "paopao/get_index";
 }

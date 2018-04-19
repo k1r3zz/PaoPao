@@ -89,7 +89,7 @@ public class RegisterActivity extends BaseActivity<LoginPresenter, LoginTask> im
 
     @Override
     public void loginSuccess(LoginEntity entity) {
-        NetLog.d("opp", entity.getName());
+        NetLog.d("opp", entity.getUser());
     }
 
     @Override

@@ -45,6 +45,8 @@ public class LoginActivity extends BaseActivity<LoginPresenter, LoginTask> imple
 
         llContext.setPadding(0, ActivityUtil.getStatusBarHeight(LoginActivity.this), 0, 0);
 
+        etPhone.setText("15216776703");
+        etPassword.setText("123456");
     }
 
     @Override
