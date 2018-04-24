@@ -6,10 +6,8 @@ import com.user.paopao.utils.NetworkUtil;
 import com.user.paopao.utils.ToastUtils;
 
 import org.json.JSONObject;
-
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
-
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import retrofit2.HttpException;

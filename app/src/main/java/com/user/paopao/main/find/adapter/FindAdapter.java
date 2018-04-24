@@ -16,7 +16,7 @@ import java.util.List;
  * description:
  */
 
-public class FindAdapter extends BaseQuickAdapter<FindEntity, BaseViewHolder> {
+public class FindAdapter extends  BaseQuickAdapter<FindEntity, BaseViewHolder> {
 
     public FindAdapter(@Nullable List<FindEntity> data) {
         super(R.layout.item_find, data);

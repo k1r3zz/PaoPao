@@ -32,44 +32,44 @@ public class HomeAdapter extends BaseQuickAdapter<HomeEntity, BaseViewHolder> {
         LinearLayout ll_l1 = helper.getView(R.id.ll_l1);
 
         helper.setText(R.id.text, item.getTitle());
-        if (item.getUsers().size() == 0) {
-            rl1.setVisibility(View.INVISIBLE);
-            rl2.setVisibility(View.INVISIBLE);
-            rl3.setVisibility(View.INVISIBLE);
-            ll_l1.setVisibility(View.GONE);
-        }
-        if (item.getUsers().size() == 1) {
-            rl1.setVisibility(View.VISIBLE);
-            rl2.setVisibility(View.INVISIBLE);
-            rl3.setVisibility(View.INVISIBLE);
-            HomeEntity.UsersBean bean1 = item.getUsers().get(0);
-            helper.setText(R.id.text1, bean1.getInfo().getNickname());
-            ll_l1.setVisibility(View.VISIBLE);
-
-        }
-        if (item.getUsers().size() == 2) {
-            rl1.setVisibility(View.VISIBLE);
-            rl2.setVisibility(View.VISIBLE);
-            rl3.setVisibility(View.INVISIBLE);
-            HomeEntity.UsersBean bean1 = item.getUsers().get(0);
-            helper.setText(R.id.text1, bean1.getInfo().getNickname());
-            HomeEntity.UsersBean bean2 = item.getUsers().get(1);
-            helper.setText(R.id.text2, bean2.getInfo().getNickname());
-            ll_l1.setVisibility(View.VISIBLE);
-        }
-        if (item.getUsers().size() == 3) {
-            rl1.setVisibility(View.VISIBLE);
-            rl2.setVisibility(View.VISIBLE);
-            rl3.setVisibility(View.VISIBLE);
-            HomeEntity.UsersBean bean1 = item.getUsers().get(0);
-            helper.setText(R.id.text1, bean1.getInfo().getNickname());
-            HomeEntity.UsersBean bean2 = item.getUsers().get(1);
-            helper.setText(R.id.text2, bean2.getInfo().getNickname());
-            HomeEntity.UsersBean bean3 = item.getUsers().get(2);
-            helper.setText(R.id.text3, bean3.getInfo().getNickname());
-            ll_l1.setVisibility(View.VISIBLE);
-
-        }
+//        if (item.getUsers().size() == 0) {
+//            rl1.setVisibility(View.INVISIBLE);
+//            rl2.setVisibility(View.INVISIBLE);
+//            rl3.setVisibility(View.INVISIBLE);
+//            ll_l1.setVisibility(View.GONE);
+//        }
+//        if (item.getUsers().size() == 1) {
+//            rl1.setVisibility(View.VISIBLE);
+//            rl2.setVisibility(View.INVISIBLE);
+//            rl3.setVisibility(View.INVISIBLE);
+//            HomeEntity.UsersBean bean1 = item.getUsers().get(0);
+//            helper.setText(R.id.text1, bean1.getInfo().getNickname());
+//            ll_l1.setVisibility(View.VISIBLE);
+//
+//        }
+//        if (item.getUsers().size() == 2) {
+//            rl1.setVisibility(View.VISIBLE);
+//            rl2.setVisibility(View.VISIBLE);
+//            rl3.setVisibility(View.INVISIBLE);
+//            HomeEntity.UsersBean bean1 = item.getUsers().get(0);
+//            helper.setText(R.id.text1, bean1.getInfo().getNickname());
+//            HomeEntity.UsersBean bean2 = item.getUsers().get(1);
+//            helper.setText(R.id.text2, bean2.getInfo().getNickname());
+//            ll_l1.setVisibility(View.VISIBLE);
+//        }
+//        if (item.getUsers().size() == 3) {
+//            rl1.setVisibility(View.VISIBLE);
+//            rl2.setVisibility(View.VISIBLE);
+//            rl3.setVisibility(View.VISIBLE);
+//            HomeEntity.UsersBean bean1 = item.getUsers().get(0);
+//            helper.setText(R.id.text1, bean1.getInfo().getNickname());
+//            HomeEntity.UsersBean bean2 = item.getUsers().get(1);
+//            helper.setText(R.id.text2, bean2.getInfo().getNickname());
+//            HomeEntity.UsersBean bean3 = item.getUsers().get(2);
+//            helper.setText(R.id.text3, bean3.getInfo().getNickname());
+//            ll_l1.setVisibility(View.VISIBLE);
+//
+//        }
 
 
         helper.addOnClickListener(R.id.rl1).addOnClickListener(R.id.rl2).addOnClickListener(R.id.rl3);

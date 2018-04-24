@@ -69,28 +69,29 @@ public class HomeActivity extends BaseActivity<HomePresenter, HomeTask> implemen
     @Override
     protected void initDatas() {
         super.initDatas();
-        mPresenter.getData("1", "4", "3", "f", "1");
+//        mPresenter.getData("1", "4", "3", "f", "1");
 
-//        list.clear();
-//        for (int i = 0; i < 5; i++) {
-//            HomeEntity entity = new HomeEntity();
-//            switch (i) {
-//                case 0:
-//                    entity.setTitle("颜值女神");
-//                    break;
-//                case 1:
-//                    entity.setTitle("特邀");
-//                    break;
-//                case 2:
-//                    entity.setTitle("御姐");
-//                    break;
-//                case 3:
-//                    entity.setTitle("萝莉");
-//                    break;
-//            }
-//            list.add(entity);
-//        }
-//        homeAdapter.setNewData(list);
+        list.clear();
+        for (int i = 0; i < 5; i++) {
+            HomeEntity entity = new HomeEntity();
+            switch (i) {
+                case 0:
+                    entity.setTitle("颜值女神");
+
+                    break;
+                case 1:
+                    entity.setTitle("特邀");
+                    break;
+                case 2:
+                    entity.setTitle("御姐");
+                    break;
+                case 3:
+                    entity.setTitle("萝莉");
+                    break;
+            }
+            list.add(entity);
+        }
+        homeAdapter.setNewData(list);
 
     }
 
